@@ -1,5 +1,5 @@
 .idea/
-/venv/
+.venv/
 config.json
 __pycache__
 /day_data/

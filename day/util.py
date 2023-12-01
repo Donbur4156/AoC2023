@@ -20,8 +20,8 @@ def get_day_data(day: str) -> List[str]:
     cfg = get_config()
 
     headers = {
-        'cookie': f'session={cfg["session_token"]}',
-        'user-agent': f'{cfg["repo"]} by {cfg["email_adress"]}'
+        'cookie': f'session={cfg["session_token"]}'
+        #'user-agent': f'{cfg["repo"]} by {cfg["email_adress"]}'
     }
     r = httpx.get(f'https://adventofcode.com/2023/day/{int(day)}/input', headers=headers)
     text = r.text.splitlines()

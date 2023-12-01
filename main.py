@@ -13,5 +13,3 @@ target_day = target_day.zfill(2)
 day_data = get_day_data(target_day)
 day_module = import_module(f'day.{target_day}')
 day_module.execute(day_data)
-
-
