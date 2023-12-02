@@ -2,6 +2,7 @@ import sys
 import datetime
 from importlib import import_module
 from pathlib import Path
+from time import perf_counter
 from day.util import get_day_data
 import shutil
 from colorama import init as colorama_init, Fore
@@ -32,4 +33,7 @@ else:
     target_day = target_day.zfill(2)
     day_data = get_day_data(target_day)
     day_module = import_module(f'day.{target_day}')
+    start_time = perf_counter()
     day_module.execute(day_data)
+    end_time = perf_counter() - start_time
+    print(f'{Fore.LIGHTBLACK_EX}Perf: Took {end_time:.3f} seconds')
