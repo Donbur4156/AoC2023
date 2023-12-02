@@ -3,5 +3,5 @@ from .util import *
 
 
 def execute(data: List[str]):
-    print(f'part 1: 1')
-    print(f'part 2: 2')
+    print_result(1, None)
+    print_result(2, None)

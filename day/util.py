@@ -3,6 +3,16 @@ from typing import List
 
 import httpx
 import json
+from colorama import Fore, Style
+
+__all__ = ['print_result', 'get_config', 'get_day_data']
+
+
+def print_result(part: int, result):
+    if result is None:
+        print(f'Part {part}: {Fore.YELLOW}Unsolved')
+    else:
+        print(f'Part {part}: {Style.BRIGHT}{Fore.GREEN}{result}')
 
 
 def get_config() -> dict:
