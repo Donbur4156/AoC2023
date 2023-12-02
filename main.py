@@ -20,7 +20,7 @@ else:
     target_day = sys.argv[1]
 
 if target_day == "gen":
-    target_day = str(target_day).zfill(2)
+    target_day = str(today.day).zfill(2)
     if Path(f"day/{target_day}.py").exists():
         print(f'{Fore.RED}Error: Can\'t generate, current day already exists.')
         exit(1)
