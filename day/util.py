@@ -25,7 +25,7 @@ def get_day_data(day: str) -> List[str]:
 
     if path.exists():
         with open(path.absolute()) as _f:
-            return _f.readlines()
+            return _f.read().splitlines()
 
     cfg = get_config()
 
