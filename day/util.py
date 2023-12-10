@@ -35,6 +35,9 @@ def get_day_data(day: str) -> List[str]:
     }
     r = httpx.get(f'https://adventofcode.com/2023/day/{int(day)}/input', headers=headers)
     text = r.text.splitlines()
+    if text[0].startswith("Please don't repeatedly request this endpoint before it unlocks!"):
+        print(f"The data from day {day} is not available")
+        exit(1)
     with open(path.absolute(), 'w') as _f:
         _f.writelines('\n'.join(text))
     return text
