@@ -1,5 +1,5 @@
 from typing import List
-from itertools import combinations, repeat
+from itertools import combinations
 import re
 from .util import *
 
